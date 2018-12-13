@@ -22,16 +22,25 @@
 	display: none;
 }
 
+.invoice-table tr td {
+	padding: 10px;
+	
+}
+
 .invoice-table tr input,
 .invoice-table tr textarea {
+	width: 100%;
 	display: none;
+	box-sizing: border-box;
+	min-height: 30px;
 }
 
 .invoice-table tr .placeholder {
 	display: inline-block;
-	min-height: 30px;
+	min-height: 40px;
 	width: 100%;
 	cursor: pointer;
+	
 }
 
 </style>
@@ -134,6 +143,10 @@
 			$(this).siblings().show();
 			$(this).siblings().html($(this).val());
 		});
+
+		$(document).on('click', '.invoice-table tr .btn-delete', function(event) {
+			$(this).parent().parent().remove();
+		})
 	});
 </script>
 <?php $this->end();?>
