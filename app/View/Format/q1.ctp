@@ -9,6 +9,7 @@
 		'type'=>'file',
 		'class'=>'',
 		'method'=>'POST',
+		'url' => array('controller' => 'format', 'action' => 'q1_result'),
 		'autocomplete'=>'off',
 		'inputDefaults'=>array(
 			'label'=>false,
@@ -67,7 +68,10 @@ foreach ($data as $index => $option) {
 	)); ?>
 
 
-<?php echo $this->Form->end();?>
+<?php echo $this->Form->end(array(
+				'label' => 'Save',
+				'class' => 'btn-primary btn'
+			));?>
 
 </div>
 
