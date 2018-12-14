@@ -7,7 +7,7 @@
 
 			$this->loadModel('Order');
 			$orders = $this->Order->find('all',array('conditions'=>array('Order.valid'=>1),'recursive'=>2));
-
+			
 			$this->loadModel('Portion');
 			$portions = $this->Portion->find('all',array('conditions'=>array('Portion.valid'=>1),'recursive'=>2));
 
